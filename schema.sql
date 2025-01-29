@@ -119,7 +119,6 @@ CREATE TABLE fund_historical_values (
     date DATE,
     value DECIMAL(10,6),
     aum DECIMAL(20,2),
-    shares_active DECIMAL(20,2),
     yield DECIMAL(10,4),
     cumulative_cashflow DECIMAL(20,2),
     investor_count INT,
@@ -130,7 +129,7 @@ CREATE TABLE fund_historical_values (
     shares_total DECIMAL(20,2),      -- Toplam Adet
     shares_active DECIMAL(20,2),     -- Aktif Adet
     occupancy_rate DECIMAL(5,2),     -- Doluluk Oranı (%)
-    market_share DECIMAL(5,2),       -- Pazar Payı (%)       
+    market_share DECIMAL(5,2),       -- Pazar Payı (%)    
     PRIMARY KEY (code, date),
     FOREIGN KEY (code) REFERENCES funds(code),
     INDEX idx_date (date),
@@ -149,5 +148,13 @@ CREATE TABLE daily_statistics (
     total_aum DECIMAL(20,2) NOT NULL,
     avg_profit DECIMAL(10,4) NOT NULL,
     avg_loss DECIMAL(10,4) NOT NULL,
+    INDEX idx_date (date)
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci;
+
+-- Enflasyon oranları tablosu
+CREATE TABLE IF NOT EXISTS inflation_rates (
+    date DATE PRIMARY KEY,
+    monthly_rate DECIMAL(10,2) NOT NULL,
+    yearly_rate DECIMAL(10,2) NOT NULL,
     INDEX idx_date (date)
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci;
