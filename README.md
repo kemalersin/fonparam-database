@@ -49,11 +49,18 @@ Bu dizin, FonParam projesinin veritabanı şemasını ve ilgili SQL betiklerini 
 - `code` (VARCHAR(10)) - Fon kodu (FK)
 - `date` (DATE) - Tarih
 - `value` (DECIMAL(10,6)) - Birim pay değeri
-- `aum` (DECIMAL(20,2)) - Toplam değer
-- `shares_active` (DECIMAL(20,2)) - Aktif pay sayısı
-- `yield` (DECIMAL(10,4)) - Günlük getiri
+- `aum` (DECIMAL(20,2)) - Toplam portföy değeri (TL)
+- `yield` (DECIMAL(10,4)) - Günlük getiri (%)
 - `cumulative_cashflow` (DECIMAL(20,2)) - Kümülatif nakit akışı
 - `investor_count` (INT) - Yatırımcı sayısı
+- `management_fee` (DECIMAL(5,2)) - Yıllık yönetim ücreti (%)
+- `risk_value` (TINYINT) - Risk değeri (1-7)
+- `purchase_value_day` (TINYINT) - Alış valörü (gün)
+- `sale_value_day` (TINYINT) - Satış valörü (gün)
+- `shares_total` (DECIMAL(20,2)) - Toplam pay adedi
+- `shares_active` (DECIMAL(20,2)) - Aktif pay adedi
+- `occupancy_rate` (DECIMAL(5,2)) - Doluluk oranı (%)
+- `market_share` (DECIMAL(5,2)) - Pazar payı (%)
 
 ## 🔍 İlişkiler
 
