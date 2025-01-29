@@ -123,6 +123,14 @@ CREATE TABLE fund_historical_values (
     yield DECIMAL(10,4),
     cumulative_cashflow DECIMAL(20,2),
     investor_count INT,
+    management_fee DECIMAL(5,2),     -- Yıllık Yönetim Ücreti (%)
+    risk_value TINYINT,              -- Risk Değeri (1-7)
+    purchase_value_day TINYINT,      -- Alış Valörü (gün)
+    sale_value_day TINYINT,          -- Satış Valörü (gün)
+    shares_total DECIMAL(20,2),      -- Toplam Adet
+    shares_active DECIMAL(20,2),     -- Aktif Adet
+    occupancy_rate DECIMAL(5,2),     -- Doluluk Oranı (%)
+    market_share DECIMAL(5,2),       -- Pazar Payı (%)       
     PRIMARY KEY (code, date),
     FOREIGN KEY (code) REFERENCES funds(code),
     INDEX idx_date (date),
