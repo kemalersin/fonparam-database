@@ -31,6 +31,8 @@ Bu dizin, FonParam projesinin veritabanı şemasını ve ilgili SQL betiklerini 
 - `type` (ENUM) - Fon tipi
 - `tefas` (BOOLEAN) - TEFAS'ta işlem görme durumu
 - `risk_value` (TINYINT) - Risk değeri (1-7)
+- `purchase_value_day` (TINYINT) - Alış valörü (gün)
+- `sale_value_day` (TINYINT) - Satış valörü (gün)
 - `has_historical_data` (BOOLEAN) - Tarihsel veri varlığı
 - `historical_data_check_date` (DATE) - Son tarihsel veri kontrol tarihi
 

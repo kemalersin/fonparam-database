@@ -50,6 +50,8 @@ CREATE TABLE funds (
              'kiymetli_madenler', 'para_piyasasi', 'serbest', 'yabanci', 'diger'),
     tefas BOOLEAN,
     risk_value TINYINT,
+    purchase_value_day TINYINT,
+    sale_value_day TINYINT,    
     has_historical_data BOOLEAN DEFAULT TRUE,
     historical_data_check_date DATE,
     FOREIGN KEY (management_company_id) REFERENCES fund_management_companies(code),
@@ -57,6 +59,7 @@ CREATE TABLE funds (
     INDEX idx_type (type),
     INDEX idx_has_historical_data (has_historical_data),
     INDEX idx_title (title),
+    INDEX idx_risk_value (risk_value),
     FULLTEXT INDEX ft_title (title),
     FULLTEXT INDEX ft_code (code)
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci;
