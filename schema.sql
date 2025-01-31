@@ -49,6 +49,7 @@ CREATE TABLE funds (
              'hisse_senedi', 'hisse_senedi_yogun', 'karma', 'katilim', 
              'kiymetli_madenler', 'para_piyasasi', 'serbest', 'yabanci', 'diger'),
     tefas BOOLEAN,
+    management_fee DECIMAL(5,2),
     risk_value TINYINT,
     purchase_value_day TINYINT,
     sale_value_day TINYINT,    

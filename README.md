@@ -30,6 +30,7 @@ Bu dizin, FonParam projesinin veritabanı şemasını ve ilgili SQL betiklerini 
 - `title` (VARCHAR(255)) - Fon adı
 - `type` (ENUM) - Fon tipi
 - `tefas` (BOOLEAN) - TEFAS'ta işlem görme durumu
+- `management_fee` (DECIMAL(5,2)) - Yıllık yönetim ücreti (%)
 - `risk_value` (TINYINT) - Risk değeri (1-7)
 - `purchase_value_day` (TINYINT) - Alış valörü (gün)
 - `sale_value_day` (TINYINT) - Satış valörü (gün)
